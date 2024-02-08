@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="booking" />
+        <module name="bonus" />
+        <module name="discovery" />
+        <module name="currency-api" />
+        <module name="currency" />
+        <module name="flights-api" />
+        <module name="user-service" />
+        <module name="flights" />
+        <module name="token-lib" />
+        <module name="config" />
+        <module name="gateway" />
+        <module name="bonus-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bonus" target="17" />
+      <module name="bonus-api" target="17" />
+      <module name="booking" target="17" />
+      <module name="config" target="17" />
+      <module name="currency" target="17" />
+      <module name="currency-api" target="17" />
+      <module name="discovery" target="17" />
+      <module name="flights" target="17" />
+      <module name="flights-api" target="17" />
+      <module name="gateway" target="17" />
+      <module name="token-lib" target="17" />
+      <module name="user-service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bonus" options="-parameters" />
+      <module name="bonus-api" options="-parameters" />
+      <module name="booking" options="-parameters" />
+      <module name="config" options="-parameters" />
+      <module name="currency" options="-parameters" />
+      <module name="currency-api" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+      <module name="flights" options="-parameters" />
+      <module name="flights-api" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="token-lib" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

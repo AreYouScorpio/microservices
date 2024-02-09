@@ -8,7 +8,7 @@ hu:
   webuni:
     tokenlib:
       keypaths:
-        public: /Users/gabor/Downloads/public.pem
+        public: /Users/atschweger/Downloads/public.pem
 spring:
   cloud:
     gateway:

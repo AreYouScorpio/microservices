@@ -8,5 +8,5 @@ hu:
   webuni:
     tokenlib:
       keypaths:
-        private: /Users/gabor/Downloads/private.pem
-        public: /Users/gabor/Downloads/public.pem
+        private: /Users/atschweger/Downloads/private.pem
+        public: /Users/atschweger/Downloads/public.pem

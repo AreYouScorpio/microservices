@@ -24,15 +24,20 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
-		
+		// kell, h ne csak beegetett user-rel tudjak bejelentkezni
+
+		//@Autowired
+		//JwtAuthFilter jwtAuthFilter
+		// nem kell, akkor kellene, ha varna ez a service felkuldott jwt-ket, de ez nem var
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
+
+	//in memory user-ek eleg:
 	@Bean
-	public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+	public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) { //passwordEncoder-t keszen kapja
 		UserBuilder users = User.builder();
 		UserDetails user1 = users.username("user1")
 		.password(passwordEncoder.encode("pass"))
@@ -55,7 +60,7 @@ public class SecurityConfig {
 			.sessionManagement(sessionConfig -> sessionConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))			
 			.authorizeHttpRequests(auth -> 
 				auth
-				.anyRequest().permitAll()
+				.anyRequest().permitAll() // mindent
 			)									
 			.build();
 	}	

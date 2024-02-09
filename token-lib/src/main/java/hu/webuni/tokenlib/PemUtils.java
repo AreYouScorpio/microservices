@@ -18,6 +18,8 @@ public class PemUtils {
 	 * openssl ecparam -genkey -name secp521r1 -noout -out keypair.pem
 	 * utána a privát kulcs kinyerése:
 	 * openssl ec -in keypair.pem -outform PEM -out private.pem
+	 * public key:
+	 * openssl ec -in keypair.pem -pubout -outform PEM -out public.pem
 	 */
 	public static PrivateKey getPrivateKey(String path) throws Exception {
 

@@ -31,7 +31,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<dependency>
+		<dependency> <!-- a token lib behuzza a security-t spring-boot-starter-security, m fugg a token-libtol -->
 			<groupId>hu.webuni</groupId>
 			<artifactId>token-lib</artifactId>
 			<version>0.0.1-SNAPSHOT</version>

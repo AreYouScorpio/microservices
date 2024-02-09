@@ -26,7 +26,7 @@ public class JwtService {
     private static final String AUTH = "auth";
     private String issuer = "webuni-user-service";
 
-    @Value("${hu.webuni.tokenlib.keypaths.private:#{null}}") //: default ertek
+    @Value("${hu.webuni.tokenlib.keypaths.private:#{null}}") //: default ertek // config server-en lasd user-service.yml, itt vannak a pem-ek (privat es publikus kulcsok)
     private String pathToPemWithPrivateKey;
     @Value("${hu.webuni.tokenlib.keypaths.public:#{null}}")
     private String pathToPemWithPublicKey;
@@ -39,7 +39,7 @@ public class JwtService {
     public void init() throws Exception {
     	if(pathToPemWithPrivateKey != null) { // ez a user-service-nek kell, a tobbinek csak visszafele
     		signerAlg = Algorithm.ECDSA512(null, (ECPrivateKey)PemUtils.getPrivateKey(pathToPemWithPrivateKey));
-    	}
+    	} //EC-s, elliptikus gorbeket hasznalo private key
     	
     	if(pathToPemWithPublicKey != null) {
     		validatorAlg = Algorithm.ECDSA512((ECPublicKey)PemUtils.getPublicKey(pathToPemWithPublicKey), null);

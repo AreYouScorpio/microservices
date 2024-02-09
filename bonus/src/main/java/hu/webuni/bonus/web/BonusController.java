@@ -23,7 +23,8 @@ public class BonusController implements BonusApi {
     BonusService bonusService;
     
     @Override
-    @PreAuthorize("#user == authentication.name")
+
+
     public double getPoints(String user) {
         return bonusRepository.findById(user)
                 .orElseGet(Bonus::new)

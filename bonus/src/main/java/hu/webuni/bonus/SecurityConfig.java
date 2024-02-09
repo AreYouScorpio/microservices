@@ -39,7 +39,7 @@ public class SecurityConfig {
 			.sessionManagement(sessionConfig -> sessionConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))			
 			.authorizeHttpRequests(auth -> 
 				auth				
-				.anyRequest().permitAll()
+				.anyRequest().permitAll() //url szinten nem meghatarozhato a kivant szabaly .. a bonusControllerben kenyszeritjuk ki, ott kapnak @PreAuthorized -et.. @PreAuthorize("#user == authentication.name").. stb
 			)						
 			.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
 			.build();
